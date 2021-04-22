@@ -8,7 +8,7 @@ function App() {
   const [birthdayNames, setBirthdayNames] = useState(dataDB);
   console.log(birthdayNames)
   return (
-    <div className="App">
+    <div className="container">
       <h1>Birthday</h1>
       {birthdayNames && birthdayNames.map((birthdayName)=>{
         return <BirthdayList birthdayName={birthdayName} />

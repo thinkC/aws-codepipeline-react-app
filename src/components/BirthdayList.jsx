@@ -4,8 +4,8 @@
     return(
         <>
         
-        <div className="outer">
-            <article>
+        <div >
+            <article className="outer">
                 <div className="imgDiv">
                     <img src={img} alt="picture" width="50px"/>
                 </div>

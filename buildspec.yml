@@ -16,7 +16,25 @@
 #       - aws s3 sync build/ s3://codepipeline-birthday-app --delete
 
 
+# version: 0.2
+# phases:
+#   pre_build:
+#     commands:
+#       - echo "Installing dependencies..."
+#       - npm install
+#   build:
+#     commands:
+#       - echo "Building React App..."
+#       - npm run build
+#   artifacts:
+#     files:
+#       - '**/*'
+#       discard-paths: no
+#       base-directory: build
+
+
 version: 0.2
+
 phases:
   pre_build:
     commands:
@@ -26,9 +44,10 @@ phases:
     commands:
       - echo "Building React App..."
       - npm run build
-  artifacts:
-    files:
-      - '**/*'
-      discard-paths: no
-      base-directory: build
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no
+  base-directory: build
 
